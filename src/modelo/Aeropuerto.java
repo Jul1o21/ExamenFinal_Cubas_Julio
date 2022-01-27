@@ -40,10 +40,16 @@ public class Aeropuerto {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
-        this.estado = estado;
+    public void activar() {
+        this.estado = true;
+    }
+    public void suspender() {
+        this.estado = false;
     }
 
+    
+    
+    
     @Override
     public String toString() {
         return "Aeropuerto(" + "nombre:" + nombre + " direccion:" + direccion + " estado:" + estado + ')';

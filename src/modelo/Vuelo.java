@@ -16,5 +16,11 @@ public class Vuelo {
     private int puertaembarque;
     private boolean estaactivo;
     private Aeropuerto aeropuerto;
+
+   
+    
+    
+    
+    
     
 }
