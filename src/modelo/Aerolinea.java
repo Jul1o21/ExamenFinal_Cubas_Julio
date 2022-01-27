@@ -83,6 +83,8 @@ public class Aerolinea {
         }
 
         this.VueloA = TempVuelos;
+        this.VueloA[this.indice]= vuelo;
+        
         this.indice++;
         System.out.println("Vuelo agregado con exito");
         result = true;

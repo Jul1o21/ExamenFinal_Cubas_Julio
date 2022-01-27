@@ -54,17 +54,17 @@ public class AppOutput {
         pasajerospordefect = new ArregloPasajero(6);
 
         pasajeroadd = new Pasajero("pasajeroTDoc1", "pasajeroNumDoc1", "pasajeroNames1", "pasajeroApellid1", fechanaci);
-        pasajerospordefect.agregar(pasajeroadd);
+        pasajerospordefect.agregarpasajero(pasajeroadd);
         pasajeroadd = new Pasajero("pasajeroTDoc2", "pasajeroNumDoc2", "pasajeroNames2", "pasajeroApellid2", fechanaci);
-        pasajerospordefect.agregar(pasajeroadd);
+        pasajerospordefect.agregarpasajero(pasajeroadd);
         pasajeroadd = new Pasajero("pasajeroTDoc3", "pasajeroNumDoc3", "pasajeroNames3", "pasajeroApellid3", fechanaci);
-        pasajerospordefect.agregar(pasajeroadd);
+        pasajerospordefect.agregarpasajero(pasajeroadd);
         pasajeroadd = new Pasajero("pasajeroTDoc4", "pasajeroNumDoc4", "pasajeroNames4", "pasajeroApellid4", fechanaci);
-        pasajerospordefect.agregar(pasajeroadd);
+        pasajerospordefect.agregarpasajero(pasajeroadd);
         pasajeroadd = new Pasajero("pasajeroTDoc5", "pasajeroNumDoc5", "pasajeroNames5", "pasajeroApellid5", fechanaci);
-        pasajerospordefect.agregar(pasajeroadd);
+        pasajerospordefect.agregarpasajero(pasajeroadd);
         pasajeroadd = new Pasajero("pasajeroTDoc6", "pasajeroNumDoc6", "pasajeroNames6", "pasajeroApellid6", fechanaci);
-        pasajerospordefect.agregar(pasajeroadd);
+        pasajerospordefect.agregarpasajero(pasajeroadd);
         
                     System.out.println(pasajerospordefect);
                     break;

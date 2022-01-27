@@ -39,6 +39,8 @@ public class ArregloPais {
         }
         
         this.PaisA = TempPaises;
+        this.PaisA[this.indice]=pais;
+        
         this.indice++;
         System.out.println("Pais agregador con exito");     
         result = true;

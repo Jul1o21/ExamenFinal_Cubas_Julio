@@ -112,6 +112,7 @@ public class Vuelo {
         }
 
         this.AsientosVuelo = TempAsientos;
+        this.AsientosVuelo[this.indiceAsientos] = asiento;
         this.indiceAsientos++;
         System.out.println("Asiento agregado con exito");
         result = true;

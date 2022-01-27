@@ -57,6 +57,8 @@ public class Pais {
         }
         
         this.CiudadA = TempCiudades;
+        this.CiudadA[this.indice] =ciudad;
+        
         this.indice++;
         System.out.println("Ciudad agregada cone exito");     
         result = true;

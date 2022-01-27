@@ -28,6 +28,7 @@ public class ArregloAeropuerto {
         }
 
         this.AeropuertoA = TempAeropuertos;
+        this.AeropuertoA[this.indice] = aeropuerto;
         this.indice++;
         System.out.println("Aeropuerto agregado con exito");
         result = true;
