@@ -74,6 +74,7 @@ public class Vuelo {
 
     public boolean venderAsiento(Pasajero pasajerovender, int numeroasiento, char fila) {
         boolean result = false;
+        numeroasiento--;
         
         if(this.AsientosVuelo[numeroasiento].getFila()=='1'&&this.AsientosVuelo[numeroasiento].getPasajero()==null){
             
@@ -102,16 +103,7 @@ public class Vuelo {
 
     public boolean reservarasiento(int numeroasiento, char fila) {
         boolean result = false;
-        if(this.AsientosVuelo[numeroasiento].getFila()=='1'&&this.AsientosVuelo[numeroasiento].getPasajero()!=null){
-            
-            this.AsientosVuelo[numeroasiento].setPasajero(null);
-            this.AsientosVuelo[numeroasiento].setEstado("disponible");
-        }
         
-        if(this.AsientosVuelo[numeroasiento].getFila()=='2'&&this.AsientosVuelo[numeroasiento].getPasajero()!=null){
-            this.AsientosVuelo[numeroasiento].setPasajero(null);
-            this.AsientosVuelo[numeroasiento].setEstado("disponible");
-        }
         result = true;
         return result;
     }
@@ -119,6 +111,19 @@ public class Vuelo {
     public boolean cancelarasiento(int numeroasiento, char fila) {
         boolean result = false;
         
+        
+        numeroasiento--;
+        if(this.AsientosVuelo[numeroasiento].getFila()=='1'&&this.AsientosVuelo[numeroasiento].getEstado().equals("reservado")){
+            System.out.println("El pasajero a eliminar es: "+ this.AsientosVuelo[numeroasiento].getPasajero());
+            
+            this.AsientosVuelo[numeroasiento].setPasajero(null);
+            this.AsientosVuelo[numeroasiento].setEstado("disponible");
+        }
+        
+        if(this.AsientosVuelo[numeroasiento].getFila()=='2'&&this.AsientosVuelo[numeroasiento].getEstado().equals("reservado")){
+            this.AsientosVuelo[numeroasiento].setPasajero(null);
+            this.AsientosVuelo[numeroasiento].setEstado("disponible");
+        }
         result = true;
         return result;
     }

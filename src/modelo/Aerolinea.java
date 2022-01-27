@@ -97,7 +97,7 @@ public class Aerolinea {
         
         for (int i = 0; i < this.indice; i++) {
             if (this.VueloA[i].getCodigo().equals(codigo)) {
-                   vueloencontrado = this.VueloA[i];
+                vueloencontrado = this.VueloA[i];
                 
                 
                 break;

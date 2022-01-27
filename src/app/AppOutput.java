@@ -66,7 +66,7 @@ public class AppOutput {
                     teclado.nextLine();
                     codigo = teclado.nextLine();
 
-                    Repositorio.pasajerotest.comprar(Repositorio.vuelossistema.encontrarvuelo(codigo), '1', 1, Repositorio.pasajerotest);
+                    Repositorio.pasajerotest.comprar(Repositorio.vuelossistema.encontrarvuelo(codigo), '1', numeroaciento, Repositorio.pasajerotest);
 
                     System.out.println(Repositorio.vuelossistema);
 
