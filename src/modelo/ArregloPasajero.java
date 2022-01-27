@@ -10,50 +10,60 @@ package modelo;
  * @author cubas
  */
 public class ArregloPasajero {
+
     private int indice;
     private Pasajero PasajeroA[];
 
     public ArregloPasajero(int cantidadpasajeros) {
         this.indice = 0;
         this.PasajeroA = new Pasajero[cantidadpasajeros];
-        
+
     }
 
     public Pasajero[] getPasajeroA() {
         return PasajeroA;
     }
-    
-    public boolean eliminar(String tipodoc, String numerDoc){
-        boolean result=false;
-            
-        
-        result =true;
+
+    public boolean eliminar(String tipodoc, String numerDoc) {
+        boolean result = false;
+
+        result = true;
         return result;
     }
-    
-    public Pasajero getpasajero(String tipodoc, String numerDoc){
-        Pasajero resultPasa=null;
-        
-        
-        
+
+    public Pasajero getpasajero(String tipodoc, String numerDoc) {
+        Pasajero resultPasa = null;
+
         return resultPasa;
     }
-    
-    public boolean agregar(Pasajero pasajeroAdd){
-        boolean result=false;
-        
+
+    public boolean agregar(Pasajero pasajeroAdd) {
+        boolean result = false;
+
         result = true;
-        
+
         return result;
     }
-    
-    
+
+    public boolean agregarpasajero(Pasajero pasajero) {
+        boolean result = false;
+        Pasajero[] TempPasajeros;
+        TempPasajeros = new Pasajero[this.indice + 1];
+        for (int i = 0; i < this.indice; i++) {
+            TempPasajeros[i] = this.PasajeroA[i];
+        }
+
+        this.PasajeroA = TempPasajeros;
+        this.indice++;
+        System.out.println("Pasajero agregado con exito");
+        result = true;
+        return result;
+
+    }
+
     @Override
     public String toString() {
         return "ArregloPasajero{" + "PasajeroA=" + PasajeroA + '}';
     }
-    
-    
-    
-    
+
 }

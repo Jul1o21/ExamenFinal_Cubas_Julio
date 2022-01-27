@@ -10,13 +10,14 @@ package modelo;
  * @author cubas
  */
 public class Vuelo {
+
     private String codigo;
     private String fecha;
     private String hora;
     private int puertaembarque;
     private boolean estaactivo;
     private Aeropuerto aeropuertoSalida;
-    private Aeropuerto aeropuertoLlegada;  
+    private Aeropuerto aeropuertoLlegada;
     private int indiceAsientos;
     private Asiento AsientosVuelo[];
 
@@ -30,8 +31,7 @@ public class Vuelo {
         this.aeropuertoLlegada = aeropuertoLlegada;
         this.indiceAsientos = 0;
         this.AsientosVuelo = new Asiento[cantacientos];
-        
-        
+
     }
 
     public String getCodigo() {
@@ -62,8 +62,6 @@ public class Vuelo {
         return aeropuertoLlegada;
     }
 
-
-
     public Asiento[] getAsientosVuelo() {
         return AsientosVuelo;
     }
@@ -72,37 +70,39 @@ public class Vuelo {
         this.estaactivo = estaactivo;
     }
 
-    
-    public boolean venderAsiento(Pasajero pasajerovender,int numeroasiento, char fila){
-        boolean result=false;
-        
-        result=true;
+    public boolean venderAsiento(Pasajero pasajerovender, int numeroasiento, char fila) {
+        boolean result = false;
+
+        result = true;
         return result;
     }
+
     public Asiento[] asientosdisponibles() {
-        Asiento[] asientosdisponibles=null;
-        
+        Asiento[] asientosdisponibles = null;
+
         return asientosdisponibles;
     }
 
-    public boolean reservarasiento(int numeroasiento, char fila){
-        boolean result=false;
-        
-        result=true;
+    public boolean reservarasiento(int numeroasiento, char fila) {
+        boolean result = false;
+
+        result = true;
         return result;
     }
-    
-    public boolean cancelarasiento(int numeroasiento, char fila){
-        boolean result=false;
-        
-        result=true;
+
+    public boolean cancelarasiento(int numeroasiento, char fila) {
+        boolean result = false;
+
+        result = true;
         return result;
     }
-    public Pasajero[] obetenerlistapasajeros(){
-        Pasajero[] listapasajeros =null;
-        
+
+    public Pasajero[] obetenerlistapasajeros() {
+        Pasajero[] listapasajeros = null;
+
         return listapasajeros;
     }
+
     public boolean agregarasiento(Asiento asiento) {
         boolean result = false;
         Asiento TempAsientos[];
@@ -110,26 +110,18 @@ public class Vuelo {
         for (int i = 0; i < this.indiceAsientos; i++) {
             TempAsientos[i] = this.AsientosVuelo[i];
         }
-        
+
         this.AsientosVuelo = TempAsientos;
         this.indiceAsientos++;
-        System.out.println("Asiento agregado con exito");     
+        System.out.println("Asiento agregado con exito");
         result = true;
         return result;
 
     }
-    
+
     @Override
     public String toString() {
         return "Vuelo{" + "codigo=" + codigo + ", fecha=" + fecha + ", hora=" + hora + ", \npuertaembarque=" + puertaembarque + ", \nestaactivo=" + estaactivo + ", \naeropuertoSalida=" + aeropuertoSalida + ", \naeropuertoLlegada=" + aeropuertoLlegada + ",\nAsientosVuelo=" + AsientosVuelo + '}';
     }
-    
-    
-   
-    
-    
-    
-    
-    
-    
+
 }

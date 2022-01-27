@@ -19,12 +19,22 @@ public class ArregloAeropuerto {
         this.AeropuertoA = new Aeropuerto[cantidadaeropuertos];
     }
 
-    public boolean agregaraerop(Aeropuerto aeropuerto) {
+    public boolean agregaraeropuerto(Aeropuerto aeropuerto) {
         boolean result = false;
+        Aeropuerto[] TempAeropuertos;
+        TempAeropuertos = new Aeropuerto[this.indice + 1];
+        for (int i = 0; i < this.indice; i++) {
+            TempAeropuertos[i] = this.AeropuertoA[i];
+        }
 
+        this.AeropuertoA = TempAeropuertos;
+        this.indice++;
+        System.out.println("Aeropuerto agregado con exito");
         result = true;
         return result;
     }
+    
+    
 
     public Aeropuerto[] obteneraeropuertospais(Pais pais) {
         Aeropuerto[] aeropuertos = null;

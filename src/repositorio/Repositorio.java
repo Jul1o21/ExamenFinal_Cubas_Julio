@@ -185,16 +185,16 @@ public class Repositorio {
         
         ciudadadd = new Ciudad("ciudadCod1", "ciudadName1");
         aeropuertoadd = new Aeropuerto("aeropuertName1", "aeropuertDirecc1", true,ciudadadd);
-        aerpuertospordefecto.agregaraerop(aeropuertoadd);
+        aerpuertospordefecto.agregaraeropuerto(aeropuertoadd);
          ciudadadd = new Ciudad("ciudadCod2", "ciudadName2");
         aeropuertoadd = new Aeropuerto("aeropuertName2", "aeropuertDirecc2", true,ciudadadd);
-        aerpuertospordefecto.agregaraerop(aeropuertoadd);
+        aerpuertospordefecto.agregaraeropuerto(aeropuertoadd);
          ciudadadd = new Ciudad("ciudadCod3", "ciudadName3");
         aeropuertoadd = new Aeropuerto("aeropuertName3", "aeropuertDirecc3", true,ciudadadd);
-        aerpuertospordefecto.agregaraerop(aeropuertoadd);
+        aerpuertospordefecto.agregaraeropuerto(aeropuertoadd);
          ciudadadd = new Ciudad("ciudadCod4", "ciudadName4");
         aeropuertoadd = new Aeropuerto("aeropuertName4", "aeropuertDirecc4", true,ciudadadd);
-        aerpuertospordefecto.agregaraerop(aeropuertoadd);
+        aerpuertospordefecto.agregaraeropuerto(aeropuertoadd);
 
         
         aeropuertosistema = aerpuertospordefecto;

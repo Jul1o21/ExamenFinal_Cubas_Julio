@@ -5,6 +5,7 @@
  */
 package app;
 
+import java.util.Date;
 import java.util.Scanner;
 import modelo.*;
 import repositorio.*;
@@ -45,7 +46,27 @@ public class AppOutput {
                     System.out.println(Repositorio.paisesessta);
                     break;
                 case 4:
-                    System.out.println(Repositorio.pasajerossistema);
+                    ArregloPasajero pasajerospordefect;
+        Pasajero pasajeroadd;
+        Date fechanaci;
+        fechanaci = new Date();
+
+        pasajerospordefect = new ArregloPasajero(6);
+
+        pasajeroadd = new Pasajero("pasajeroTDoc1", "pasajeroNumDoc1", "pasajeroNames1", "pasajeroApellid1", fechanaci);
+        pasajerospordefect.agregar(pasajeroadd);
+        pasajeroadd = new Pasajero("pasajeroTDoc2", "pasajeroNumDoc2", "pasajeroNames2", "pasajeroApellid2", fechanaci);
+        pasajerospordefect.agregar(pasajeroadd);
+        pasajeroadd = new Pasajero("pasajeroTDoc3", "pasajeroNumDoc3", "pasajeroNames3", "pasajeroApellid3", fechanaci);
+        pasajerospordefect.agregar(pasajeroadd);
+        pasajeroadd = new Pasajero("pasajeroTDoc4", "pasajeroNumDoc4", "pasajeroNames4", "pasajeroApellid4", fechanaci);
+        pasajerospordefect.agregar(pasajeroadd);
+        pasajeroadd = new Pasajero("pasajeroTDoc5", "pasajeroNumDoc5", "pasajeroNames5", "pasajeroApellid5", fechanaci);
+        pasajerospordefect.agregar(pasajeroadd);
+        pasajeroadd = new Pasajero("pasajeroTDoc6", "pasajeroNumDoc6", "pasajeroNames6", "pasajeroApellid6", fechanaci);
+        pasajerospordefect.agregar(pasajeroadd);
+        
+                    System.out.println(pasajerospordefect);
                     break;
 
                 case 5:
