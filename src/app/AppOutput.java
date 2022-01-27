@@ -95,9 +95,20 @@ public class AppOutput {
                     
                 case 9:
                     String codigo9;
-                    System.out.println("Digite el codigod del vuelo del que quiere reservar");
+                    System.out.println("Digite el codigod del vuelo del que quiere cancelar ");
 
                     codigo9 = teclado.nextLine();
+                    
+                    System.out.println("Digite el numero de aciento y la fila sera 1 ");
+                    int aciento9;
+                    char fila9;
+                    
+                    aciento9 = teclado.nextInt();
+                    teclado.nextLine();
+                   
+                    
+                    Repositorio.vuelossistema.encontrarvuelo(codigo9).cancelarasiento(aciento9, '1');
+                    
                     
                    break;
             }

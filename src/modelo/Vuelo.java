@@ -83,6 +83,7 @@ public class Vuelo {
         
         if(this.AsientosVuelo[numeroasiento].getFila()=='2'&&this.AsientosVuelo[numeroasiento].getPasajero()==null){
             this.AsientosVuelo[numeroasiento].setPasajero(pasajerovender);
+            this.AsientosVuelo[numeroasiento].setEstado("reservado");
         }
         
         
@@ -101,14 +102,23 @@ public class Vuelo {
 
     public boolean reservarasiento(int numeroasiento, char fila) {
         boolean result = false;
-
+        if(this.AsientosVuelo[numeroasiento].getFila()=='1'&&this.AsientosVuelo[numeroasiento].getPasajero()!=null){
+            
+            this.AsientosVuelo[numeroasiento].setPasajero(null);
+            this.AsientosVuelo[numeroasiento].setEstado("disponible");
+        }
+        
+        if(this.AsientosVuelo[numeroasiento].getFila()=='2'&&this.AsientosVuelo[numeroasiento].getPasajero()!=null){
+            this.AsientosVuelo[numeroasiento].setPasajero(null);
+            this.AsientosVuelo[numeroasiento].setEstado("disponible");
+        }
         result = true;
         return result;
     }
 
     public boolean cancelarasiento(int numeroasiento, char fila) {
         boolean result = false;
-
+        
         result = true;
         return result;
     }
