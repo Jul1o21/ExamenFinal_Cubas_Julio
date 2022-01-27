@@ -25,6 +25,16 @@ public class Pasajero {
         this.apellidos = apellidos;
         this.fechanacim = fechanacim;
     }
+    
+    
+    
+    public boolean comprar(Vuelo vuelo,char fila,int nroAsiento, Pasajero pasajero){
+        boolean resultado = false;
+        
+        vuelo.venderAsiento(pasajero, nroAsiento, fila);
+        
+        return resultado;
+    }
 
     public String getTipodocumento() {
         return tipodocumento;
@@ -65,18 +75,10 @@ public class Pasajero {
     
     
 
-    private boolean comprar(Vuelo vuelo, char fila, int numeroasiento){
-        boolean result=false;
-        
-        
-        
-        result=true;
-        return result;
-    }
-    
+   
     @Override
     public String toString() {
-        return "Pasajero{" + "tipodocumento=" + tipodocumento + ", numerodocumento=" + numerodocumento + ", nombres=" + nombres + ", apellidos=" + apellidos + ", fechanacim=" + fechanacim + '}';
+        return "\n\nPasajero{" + "tipodocumento=" + tipodocumento + ", numerodocumento=" + numerodocumento + ", nombres=" + nombres + ", apellidos=" + apellidos + ", fechanacim=" + fechanacim + '}';
     }
     
     

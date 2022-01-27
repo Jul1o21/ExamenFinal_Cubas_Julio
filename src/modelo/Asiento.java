@@ -81,7 +81,7 @@ public class Asiento {
 
     @Override
     public String toString() {
-        return "Asiento{" + "numeroasient=" + numeroasient + ", fila=" + fila + ", estado=" + estado + ", pasajero=" + pasajero + '}';
+        return "\nAsiento{" + "numeroasient=" + numeroasient + ", fila=" + fila + ", estado=" + estado + ", pasajero=" + pasajero + '}';
     }
     
    

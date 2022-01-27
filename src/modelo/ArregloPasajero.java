@@ -5,6 +5,8 @@
  */
 package modelo;
 
+import java.util.Arrays;
+
 /**
  *
  * @author cubas
@@ -42,8 +44,6 @@ public class ArregloPasajero {
     public boolean agregarpasajero(Pasajero pasajero) {
         boolean result = false;
         Pasajero[] TempPasajeros;
-        
-        
         TempPasajeros = new Pasajero[this.indice + 1];
         for (int i = 0; i < this.indice; i++) {
             TempPasajeros[i] = this.PasajeroA[i];
@@ -61,7 +61,7 @@ public class ArregloPasajero {
 
     @Override
     public String toString() {
-        return "ArregloPasajero{" + "PasajeroA=" + PasajeroA + '}';
+        return "\n\nArregloPasajero{" + "PasajeroA=" + Arrays.toString(PasajeroA) + '}';
     }
 
 }

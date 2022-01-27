@@ -92,9 +92,25 @@ public class Aerolinea {
 
     }
 
+    public Vuelo encontrarvuelo(String codigo){
+        Vuelo vueloencontrado=null;
+        
+        for (int i = 0; i < this.indice; i++) {
+            if (this.VueloA[i].getCodigo().equals(codigo)) {
+                   vueloencontrado = this.VueloA[i];
+                
+                
+                break;
+            }
+        }
+        return vueloencontrado;
+        
+        
+    }
+    
     @Override
     public String toString() {
-        return "Aerolinea{" + "nombre=" + nombre + ", RUC=" + RUC + ", VueloA=" + Arrays.toString(VueloA) + '}';
+        return "\n\nAerolinea{" + "nombre=" + nombre + ", RUC=" + RUC + ", VueloA=" + Arrays.toString(VueloA) + '}';
     }
 
 }

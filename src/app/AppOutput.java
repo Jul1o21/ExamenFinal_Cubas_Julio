@@ -28,7 +28,7 @@ public class AppOutput {
 
             System.out.println("\tEscoja una Opción");
             System.out.println("\n1.Reiniciar sistema \n2.-Mostrar Aeropuertos del sistema \n3.-Mostrar los paises del sistema \n4.-Mostrar los pasajeros del sistema"
-                    + "\n5.-Mostrar los vuelos del sistema");
+                    + "\n5.-Mostrar los vuelos del sistema \n6.-Comprar un boleto de avison ");
 
             op1 = teclado.nextInt();
 
@@ -46,31 +46,39 @@ public class AppOutput {
                     System.out.println(Repositorio.paisesessta);
                     break;
                 case 4:
-                    ArregloPasajero pasajerospordefect;
-        Pasajero pasajeroadd;
-        Date fechanaci;
-        fechanaci = new Date();
-
-        pasajerospordefect = new ArregloPasajero(6);
-
-        pasajeroadd = new Pasajero("pasajeroTDoc1", "pasajeroNumDoc1", "pasajeroNames1", "pasajeroApellid1", fechanaci);
-        pasajerospordefect.agregarpasajero(pasajeroadd);
-        pasajeroadd = new Pasajero("pasajeroTDoc2", "pasajeroNumDoc2", "pasajeroNames2", "pasajeroApellid2", fechanaci);
-        pasajerospordefect.agregarpasajero(pasajeroadd);
-        pasajeroadd = new Pasajero("pasajeroTDoc3", "pasajeroNumDoc3", "pasajeroNames3", "pasajeroApellid3", fechanaci);
-        pasajerospordefect.agregarpasajero(pasajeroadd);
-        pasajeroadd = new Pasajero("pasajeroTDoc4", "pasajeroNumDoc4", "pasajeroNames4", "pasajeroApellid4", fechanaci);
-        pasajerospordefect.agregarpasajero(pasajeroadd);
-        pasajeroadd = new Pasajero("pasajeroTDoc5", "pasajeroNumDoc5", "pasajeroNames5", "pasajeroApellid5", fechanaci);
-        pasajerospordefect.agregarpasajero(pasajeroadd);
-        pasajeroadd = new Pasajero("pasajeroTDoc6", "pasajeroNumDoc6", "pasajeroNames6", "pasajeroApellid6", fechanaci);
-        pasajerospordefect.agregarpasajero(pasajeroadd);
-        
-                    System.out.println(pasajerospordefect);
+                    System.out.println(Repositorio.pasajerossistema);
                     break;
 
                 case 5:
                     System.out.println(Repositorio.vuelossistema);
+                    break;
+                case 6:
+                    Pasajero pasajerotest = new Pasajero("DNI", "1111", "Nombretest", "ApellidosTest", new Date());
+
+                    int numeroaciento;
+
+                    System.out.println("Digite el numero de asiento y el codigo del vuelom, se le asignara la fila 1 ");
+                    String codigo;
+
+                    numeroaciento = teclado.nextInt();
+                    teclado.nextLine();
+                    codigo = teclado.nextLine();
+
+                    Repositorio.pasajerotest.comprar(Repositorio.vuelossistema.encontrarvuelo(codigo), '1', 1, Repositorio.pasajerotest);
+
+                    System.out.println(Repositorio.vuelossistema);
+
+                    break;
+
+                case 7:
+                    
+                    
+                    System.out.println("Digite el codigod de la ciudad del aeropuerto que desea");
+                    
+                    
+                    break;
+
+                case 8:
                     break;
             }
 

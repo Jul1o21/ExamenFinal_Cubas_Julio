@@ -18,12 +18,18 @@ public class Repositorio {
     public static Aerolinea vuelossistema;
     public static ArregloPasajero pasajerossistema;
     public static ArregloAeropuerto aeropuertosistema;
-
+    
+    public static Pasajero  pasajerotest= new Pasajero("pasajeroTDoc3", "pasajeroNumDoc3", "pasajeroNames3", "pasajeroApellid3", new Date());
+    
+    
     public static  void reiniciarsistema() {
+        
+        
+        
         paisespordefecto();
         aerolineaspordefecto();
         listapasajerospordefecto();
-        aerolineaspordefecto();
+        aeropuertospordefecto();
     }
 
     public static  void paisespordefecto() {
@@ -119,7 +125,9 @@ public class Repositorio {
         pasajeroadd = new Pasajero("pasajeroTDoc6", "pasajeroNumDoc6", "pasajeroNames6", "pasajeroApellid6", fechanaci);
         asientoadd = new Asiento(6, '2', "reservado", pasajeroadd);
         vueloadd.agregarasiento(asientoadd);
-
+        
+        
+        aerolinepordefect.agregarvuelo(vueloadd);
         //
         
          ciudadadd = new Ciudad("ciudadCod3", "ciudadName3");
@@ -147,6 +155,8 @@ public class Repositorio {
         pasajeroadd = new Pasajero("pasajeroTDoc16", "pasajeroNumDoc16", "pasajeroNames16", "pasajeroApellid16", fechanaci);
         asientoadd = new Asiento(6, '2', "reservado", pasajeroadd);
         vueloadd.agregarasiento(asientoadd);
+        
+        aerolinepordefect.agregarvuelo(vueloadd);
         
         
         vuelossistema = aerolinepordefect;
@@ -181,6 +191,7 @@ public class Repositorio {
         ArregloAeropuerto aerpuertospordefecto;
         Aeropuerto aeropuertoadd;
         aerpuertospordefecto = new ArregloAeropuerto(4);
+        
         Ciudad ciudadadd;
         
         ciudadadd = new Ciudad("ciudadCod1", "ciudadName1");

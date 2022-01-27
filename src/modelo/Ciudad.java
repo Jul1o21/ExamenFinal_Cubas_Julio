@@ -42,7 +42,7 @@ public class Ciudad {
 
     @Override
     public String toString() {
-        return "Ciudad(" + " codigo:" + codigo + " nombre:" + nombre + ')';
+        return "\n\nCiudad(" + " codigo:" + codigo + " nombre:" + nombre + ')';
     }
     
 }

@@ -73,7 +73,7 @@ public class Pais {
     
     @Override
     public String toString() {
-        return "Pais(" + "codigo:" + codigo + ", nombre: " + nombre + " Ciudades: " + Arrays.toString(CiudadA) +  ')';
+        return "\n\nPais(" + "codigo:" + codigo + ", nombre: " + nombre + " Ciudades: " + Arrays.toString(CiudadA) +  ')';
     }
 
    

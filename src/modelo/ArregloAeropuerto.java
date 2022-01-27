@@ -5,6 +5,8 @@
  */
 package modelo;
 
+import java.util.Arrays;
+
 /**
  *
  * @author cubas
@@ -26,7 +28,7 @@ public class ArregloAeropuerto {
         for (int i = 0; i < this.indice; i++) {
             TempAeropuertos[i] = this.AeropuertoA[i];
         }
-
+        
         this.AeropuertoA = TempAeropuertos;
         this.AeropuertoA[this.indice] = aeropuerto;
         this.indice++;
@@ -54,7 +56,7 @@ public class ArregloAeropuerto {
     
     @Override
     public String toString() {
-        return "ArregloAeropuerto{" + "AeropuertoA=" + AeropuertoA + '}';
+        return "\n\nArregloAeropuerto{" + "AeropuertoA=" + Arrays.toString(AeropuertoA) + '}';
     }
 
 }

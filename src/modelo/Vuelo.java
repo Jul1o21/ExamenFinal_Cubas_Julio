@@ -5,6 +5,8 @@
  */
 package modelo;
 
+import java.util.Arrays;
+
 /**
  *
  * @author cubas
@@ -72,7 +74,21 @@ public class Vuelo {
 
     public boolean venderAsiento(Pasajero pasajerovender, int numeroasiento, char fila) {
         boolean result = false;
-
+        
+        if(this.AsientosVuelo[numeroasiento].getFila()=='1'&&this.AsientosVuelo[numeroasiento].getPasajero()==null){
+            
+            this.AsientosVuelo[numeroasiento].setPasajero(pasajerovender);
+            this.AsientosVuelo[numeroasiento].setEstado("reservado");
+        }
+        
+        if(this.AsientosVuelo[numeroasiento].getFila()=='2'&&this.AsientosVuelo[numeroasiento].getPasajero()==null){
+            this.AsientosVuelo[numeroasiento].setPasajero(pasajerovender);
+        }
+        
+        
+        
+        
+        
         result = true;
         return result;
     }
@@ -122,7 +138,8 @@ public class Vuelo {
 
     @Override
     public String toString() {
-        return "Vuelo{" + "codigo=" + codigo + ", fecha=" + fecha + ", hora=" + hora + ", \npuertaembarque=" + puertaembarque + ", \nestaactivo=" + estaactivo + ", \naeropuertoSalida=" + aeropuertoSalida + ", \naeropuertoLlegada=" + aeropuertoLlegada + ",\nAsientosVuelo=" + AsientosVuelo + '}';
+        return "\n\nVuelo{" + "codigo=" + codigo + ", fecha=" + fecha + ", hora=" + hora + ", \npuertaembarque=" + puertaembarque + ", \nestaactivo=" + estaactivo + ", \naeropuertoSalida=" + aeropuertoSalida + ", \naeropuertoLlegada=" + aeropuertoLlegada + ", \n\nAsientosVuelo=" + Arrays.toString(AsientosVuelo) + '}';
     }
 
+   
 }
