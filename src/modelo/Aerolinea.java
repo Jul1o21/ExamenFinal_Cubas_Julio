@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -18,7 +19,7 @@ public class Aerolinea {
     private int indice;
     private Vuelo VueloA[];
 
-    public Aerolinea(String nombre, String RUC, int cantvuelos, Vuelo[] VueloA) {
+    public Aerolinea(String nombre, String RUC, int cantvuelos) {
         this.nombre = nombre;
         this.RUC = RUC;
         this.indice = 0;
@@ -66,13 +67,32 @@ public class Aerolinea {
         Pasajero[] pasajerosdelvuelo = null;
         return pasajerosdelvuelo;
     }
-    
-    public Vuelo[] getVuelosdeunaciudad(Ciudad ciudadelegida,Date fecha) {
+
+    public Vuelo[] getVuelosdeunaciudad(Ciudad ciudadelegida, Date fecha) {
         Vuelo[] vuelosciudad = null;
-        
+
         return vuelosciudad;
     }
-    
-    
-    
+
+    public boolean agregarvuelo(Vuelo vuelo) {
+        boolean result = false;
+        Vuelo TempVuelos[];
+        TempVuelos = new Vuelo[this.indice + 1];
+        for (int i = 0; i < this.indice; i++) {
+            TempVuelos[i] = this.VueloA[i];
+        }
+
+        this.VueloA = TempVuelos;
+        this.indice++;
+        System.out.println("Vuelo agregado con exito");
+        result = true;
+        return result;
+
+    }
+
+    @Override
+    public String toString() {
+        return "Aerolinea{" + "nombre=" + nombre + ", RUC=" + RUC + ", VueloA=" + Arrays.toString(VueloA) + '}';
+    }
+
 }

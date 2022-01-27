@@ -20,7 +20,7 @@ public class Vuelo {
     private int indiceAsientos;
     private Asiento AsientosVuelo[];
 
-    public Vuelo(String codigo, String fecha, String hora, int puertaembarque, boolean estaactivo, Aeropuerto aeropuertoSalida, Aeropuerto aeropuertoLlegada, int cantacientos, Asiento[] AsientosVuelo) {
+    public Vuelo(String codigo, String fecha, String hora, int puertaembarque, boolean estaactivo, Aeropuerto aeropuertoSalida, Aeropuerto aeropuertoLlegada, int cantacientos) {
         this.codigo = codigo;
         this.fecha = fecha;
         this.hora = hora;
@@ -103,8 +103,21 @@ public class Vuelo {
         
         return listapasajeros;
     }
-    
-    
+    public boolean agregarasiento(Asiento asiento) {
+        boolean result = false;
+        Asiento TempAsientos[];
+        TempAsientos = new Asiento[this.indiceAsientos + 1];
+        for (int i = 0; i < this.indiceAsientos; i++) {
+            TempAsientos[i] = this.AsientosVuelo[i];
+        }
+        
+        this.AsientosVuelo = TempAsientos;
+        this.indiceAsientos++;
+        System.out.println("Asiento agregado con exito");     
+        result = true;
+        return result;
+
+    }
     
     @Override
     public String toString() {

@@ -22,10 +22,11 @@ public class AppOutput {
         do {
 
             System.out.println("\tEscoja una Opción");
-            System.out.println(" 1.- Acceder como Alumno\n 2.- Acceder como Operario\n0.- Salir del Sistema");
+            System.out.println(" 1.-Mostrar Pasajeros del sistema \n2.-Mostrar las Aerolineas del sistema\n3.-Mostrar los paises del sistema"
+                    + "\n3.-Mostrar los aeropuertos del sistema");
 
             op1 = teclado.nextInt();
-
+            
             switch (op1) {
 
                 case 1:

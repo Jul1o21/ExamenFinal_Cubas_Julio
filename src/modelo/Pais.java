@@ -17,7 +17,7 @@ public class Pais {
     private Ciudad CiudadA[];
     private int indice;
     
-    public Pais(String codigo, String nombre, Ciudad ciudad, int cantidadciudades) {  
+    public Pais(String codigo, String nombre, int cantidadciudades) {  
         this.codigo = codigo;
         this.nombre = nombre;
         this.indice = 0;
@@ -47,6 +47,24 @@ public class Pais {
     public void setCiudadA(Ciudad[] CiudadA) {
         this.CiudadA = CiudadA;
     }
+    
+    public boolean agregarciudad(Ciudad ciudad) {
+        boolean result = false;
+        Ciudad TempCiudades[];
+        TempCiudades = new Ciudad[this.indice + 1];
+        for (int i = 0; i < this.indice; i++) {
+            TempCiudades[i] = this.CiudadA[i];
+        }
+        
+        this.CiudadA = TempCiudades;
+        this.indice++;
+        System.out.println("Ciudad agregada cone exito");     
+        result = true;
+        return result;
+
+    }
+
+    
 
     
     
