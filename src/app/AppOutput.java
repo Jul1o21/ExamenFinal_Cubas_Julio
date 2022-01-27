@@ -30,7 +30,7 @@ public class AppOutput {
             System.out.println("\n1.Reiniciar sistema \n2.-Mostrar Aeropuertos del sistema \n3.-Mostrar los paises del sistema \n4.-Mostrar los pasajeros del sistema"
                     + "\n5.-Mostrar los vuelos del sistema \n6.-Comprar un boleto de avison \n7.-Suspender un aeropuerto con el codigo de la ciudad"
                     + "\n8.-Activar un aeropuerto con el codigo de la ciudad "
-                    + "\n9.-Reservar ");
+                    + "\n9.-Cancelar aciento ");
 
             op1 = teclado.nextInt();
 
@@ -89,10 +89,14 @@ public class AppOutput {
                     System.out.println("Digite el codigod de la ciudad del aeropuerto que desea activar");
 
                     codigo8 = teclado.nextLine();
-                    ;
-
+                    
                     Repositorio.aeropuertosistema.obteneraeropuertociudad(codigo8).activar();
                     break;
+                    
+                case 9:
+                    String codigo9;
+                    
+                   break;
             }
 
         } while (op1 != 0);
