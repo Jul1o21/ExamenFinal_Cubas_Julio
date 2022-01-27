@@ -40,7 +40,7 @@ public class Pais {
         this.nombre = nombre;
     }
 
-    public Ciudad[] getCiudadA() {
+    public Ciudad[] getCiudades() {
         return CiudadA;
     }
 
@@ -48,6 +48,9 @@ public class Pais {
         this.CiudadA = CiudadA;
     }
 
+    
+    
+    
     @Override
     public String toString() {
         return "Pais(" + "codigo:" + codigo + ", nombre: " + nombre + " Ciudades: " + Arrays.toString(CiudadA) +  ')';

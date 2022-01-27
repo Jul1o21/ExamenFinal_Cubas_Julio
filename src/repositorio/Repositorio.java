@@ -5,10 +5,16 @@
  */
 package repositorio;
 
+import modelo.*;
+
 /**
  *
  * @author cubas
  */
 public class Repositorio {
+    public static ArregloPais paisesessta;
+    public static Aerolinea vuelossistema;
+    public static ArregloPasajero pasajerossistema;
+    public static ArregloAeropuerto aeropuertosistema;
     
 }

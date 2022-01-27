@@ -28,7 +28,27 @@ public class ArregloPais {
     public void setPaisA(Pais[] PaisA) {
         this.PaisA = PaisA;
     }
-
+    
+    public boolean agregarpais(Pais pais){
+        boolean result=false;
+        
+        result=true;
+        return result;
+        
+    }
+    public boolean eliminarpais(String codigo){
+        boolean result=false;
+        
+        result=true;
+        return result;
+        
+    }
+    
+    public Pais getpais(String codigo){
+        Pais paisdevuelto=null;
+        
+        return paisdevuelto;
+    }
     @Override
     public String toString() {
         return "\nArregloPais(" + "ConjuntoPaises:" + Arrays.toString(PaisA) + "\n\n"+')';

@@ -33,6 +33,12 @@ public class Ciudad {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    
+    public Aeropuerto getaeropuerto(String codigociudad){
+        Aeropuerto aeropuertoobtenido=null;
+        
+        return aeropuertoobtenido;
+    }
 
     @Override
     public String toString() {
