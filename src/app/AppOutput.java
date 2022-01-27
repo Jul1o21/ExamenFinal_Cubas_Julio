@@ -25,10 +25,12 @@ public class AppOutput {
         int op1;
 
         do {
-
+            System.out.println("LAS SIGUIENTES ACCIONES ESTAN DISPONIBLES PARA LOS DATOS DEL REPOSITORIO");
             System.out.println("\tEscoja una Opción");
             System.out.println("\n1.Reiniciar sistema \n2.-Mostrar Aeropuertos del sistema \n3.-Mostrar los paises del sistema \n4.-Mostrar los pasajeros del sistema"
-                    + "\n5.-Mostrar los vuelos del sistema \n6.-Comprar un boleto de avison ");
+                    + "\n5.-Mostrar los vuelos del sistema \n6.-Comprar un boleto de avison \n7.-Suspender un aeropuerto con el codigo de la ciudad"
+                    + "\n8.-Activar un aeropuerto con el codigo de la ciudad "
+                    + "\n9.-Reservar ");
 
             op1 = teclado.nextInt();
 
@@ -71,14 +73,25 @@ public class AppOutput {
                     break;
 
                 case 7:
-                    
-                    
-                    System.out.println("Digite el codigod de la ciudad del aeropuerto que desea");
-                    
-                    
+                    String codigo7;
+
+                    System.out.println("Digite el codigod de la ciudad del aeropuerto que desea suspender");
+                    teclado.nextLine();
+                    codigo7 = teclado.nextLine();
+
+                    Repositorio.aeropuertosistema.obteneraeropuertociudad(codigo7).suspender();
+
                     break;
 
                 case 8:
+                    String codigo8;
+
+                    System.out.println("Digite el codigod de la ciudad del aeropuerto que desea activar");
+
+                    codigo8 = teclado.nextLine();
+                    ;
+
+                    Repositorio.aeropuertosistema.obteneraeropuertociudad(codigo8).activar();
                     break;
             }
 

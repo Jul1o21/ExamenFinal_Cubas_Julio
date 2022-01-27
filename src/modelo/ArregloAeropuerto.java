@@ -46,13 +46,18 @@ public class ArregloAeropuerto {
         return aeropuertos;
     }
     
-    public Aeropuerto obteneraeropuertociudad(Ciudad ciudad) {
+    public Aeropuerto obteneraeropuertociudad(String codigociudad) {
         Aeropuerto aeropuerto = null;
-
+        for (int i = 0; i < this.indice; i++) {
+            if (this.AeropuertoA[i].getCiudad().getCodigo().equals(codigociudad)) {
+                   aeropuerto = this.AeropuertoA[i];
+                break;
+            }
+        }
        
         return aeropuerto;
     }
-    
+  
     
     @Override
     public String toString() {
