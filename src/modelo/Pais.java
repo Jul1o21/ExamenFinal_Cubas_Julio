@@ -5,6 +5,8 @@
  */
 package modelo;
 
+import java.util.Arrays;
+
 /**
  *
  * @author cubas
@@ -12,12 +14,14 @@ package modelo;
 public class Pais {
     private String codigo;
     private String nombre;
-    private Ciudad ciudad;
-
-    public Pais(String codigo, String nombre, Ciudad ciudad) {  
+    private Ciudad CiudadA[];
+    private int indice;
+    
+    public Pais(String codigo, String nombre, Ciudad ciudad, int cantidadciudades) {  
         this.codigo = codigo;
         this.nombre = nombre;
-        this.ciudad = ciudad;
+        this.indice = 0;
+        this.CiudadA = new Ciudad[cantidadciudades];
     }
 
     public String getCodigo() {
@@ -36,12 +40,18 @@ public class Pais {
         this.nombre = nombre;
     }
 
-    public Ciudad getCiudad() {
-        return ciudad;
+    public Ciudad[] getCiudadA() {
+        return CiudadA;
     }
 
-    public void setCiudad(Ciudad ciudad) {
-        this.ciudad = ciudad;
+    public void setCiudadA(Ciudad[] CiudadA) {
+        this.CiudadA = CiudadA;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Pais(" + "codigo:" + codigo + ", nombre: " + nombre + " Ciudades: " + Arrays.toString(CiudadA) +  ')';
+    }
+
+   
 }
