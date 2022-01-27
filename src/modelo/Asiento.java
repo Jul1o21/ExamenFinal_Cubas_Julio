@@ -47,6 +47,16 @@ public class Asiento {
         this.estado = estado;
     }
 
+    public Pasajero getPasajero() {
+        return pasajero;
+    }
+
+    public void setPasajero(Pasajero pasajero) {
+        this.pasajero = pasajero;
+    }
+
+    
+    
     
     public boolean reservarAsient(){
         boolean result;
@@ -68,10 +78,11 @@ public class Asiento {
         result=true;
         return result;
     }
-    
+
     @Override
     public String toString() {
-        return "Asiento{" + "numeroasient=" + numeroasient + ", fila=" + fila + ", estado=" + estado + '}';
+        return "Asiento{" + "numeroasient=" + numeroasient + ", fila=" + fila + ", estado=" + estado + ", pasajero=" + pasajero + '}';
     }
     
+   
 }

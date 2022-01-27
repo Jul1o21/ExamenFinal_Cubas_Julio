@@ -61,6 +61,9 @@ public class Pasajero {
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
+    
+    
+    
 
     private boolean comprar(Vuelo vuelo, char fila, int numeroasiento){
         boolean result=false;
