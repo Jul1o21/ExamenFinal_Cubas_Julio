@@ -87,7 +87,7 @@ public class AppOutput {
                     String codigo8;
 
                     System.out.println("Digite el codigod de la ciudad del aeropuerto que desea activar");
-
+                    teclado.nextLine();
                     codigo8 = teclado.nextLine();
                     
                     Repositorio.aeropuertosistema.obteneraeropuertociudad(codigo8).activar();
@@ -95,6 +95,9 @@ public class AppOutput {
                     
                 case 9:
                     String codigo9;
+                    System.out.println("Digite el codigod del vuelo del que quiere reservar");
+
+                    codigo9 = teclado.nextLine();
                     
                    break;
             }
