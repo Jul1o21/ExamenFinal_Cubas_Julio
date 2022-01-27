@@ -62,6 +62,15 @@ public class Pasajero {
         this.apellidos = apellidos;
     }
 
+    private boolean comprar(Vuelo vuelo, char fila, int numeroasiento){
+        boolean result=false;
+        
+        
+        
+        result=true;
+        return result;
+    }
+    
     @Override
     public String toString() {
         return "Pasajero{" + "tipodocumento=" + tipodocumento + ", numerodocumento=" + numerodocumento + ", nombres=" + nombres + ", apellidos=" + apellidos + ", fechanacim=" + fechanacim + '}';

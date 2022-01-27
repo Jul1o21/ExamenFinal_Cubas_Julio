@@ -9,7 +9,7 @@ package app;
  *
  * @author cubas
  */
-public class ExamenFinalAlgo {
+public class AppVista {
 
     /**
      * @param args the command line arguments

@@ -15,9 +15,105 @@ public class Vuelo {
     private String hora;
     private int puertaembarque;
     private boolean estaactivo;
-    private Aeropuerto aeropuerto;
+    private Aeropuerto aeropuertoSalida;
+    private Aeropuerto aeropuertoLlegada;  
+    private int indiceAsientos;
+    private Asiento AsientosVuelo[];
 
+    public Vuelo(String codigo, String fecha, String hora, int puertaembarque, boolean estaactivo, Aeropuerto aeropuertoSalida, Aeropuerto aeropuertoLlegada, int cantacientos, Asiento[] AsientosVuelo) {
+        this.codigo = codigo;
+        this.fecha = fecha;
+        this.hora = hora;
+        this.puertaembarque = puertaembarque;
+        this.estaactivo = estaactivo;
+        this.aeropuertoSalida = aeropuertoSalida;
+        this.aeropuertoLlegada = aeropuertoLlegada;
+        this.indiceAsientos = 0;
+        this.AsientosVuelo = new Asiento[cantacientos];
+        
+        
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public String getHora() {
+        return hora;
+    }
+
+    public int getPuertaembarque() {
+        return puertaembarque;
+    }
+
+    public boolean isEstaactivo() {
+        return estaactivo;
+    }
+
+    public Aeropuerto getAeropuertoSalida() {
+        return aeropuertoSalida;
+    }
+
+    public Aeropuerto getAeropuertoLlegada() {
+        return aeropuertoLlegada;
+    }
+
+
+
+    public Asiento[] getAsientosVuelo() {
+        return AsientosVuelo;
+    }
+
+    public void setEstaactivo(boolean estaactivo) {
+        this.estaactivo = estaactivo;
+    }
+
+    
+    public boolean venderAsiento(Pasajero pasajerovender,int numeroasiento, char fila){
+        boolean result=false;
+        
+        result=true;
+        return result;
+    }
+    public Asiento[] asientosdisponibles() {
+        Asiento[] asientosdisponibles=null;
+        
+        return asientosdisponibles;
+    }
+
+    public boolean reservarasiento(int numeroasiento, char fila){
+        boolean result=false;
+        
+        result=true;
+        return result;
+    }
+    
+    public boolean cancelarasiento(int numeroasiento, char fila){
+        boolean result=false;
+        
+        result=true;
+        return result;
+    }
+    public Pasajero[] obetenerlistapasajeros(){
+        Pasajero[] listapasajeros =null;
+        
+        return listapasajeros;
+    }
+    
+    
+    
+    @Override
+    public String toString() {
+        return "Vuelo{" + "codigo=" + codigo + ", fecha=" + fecha + ", hora=" + hora + ", \npuertaembarque=" + puertaembarque + ", \nestaactivo=" + estaactivo + ", \naeropuertoSalida=" + aeropuertoSalida + ", \naeropuertoLlegada=" + aeropuertoLlegada + ",\nAsientosVuelo=" + AsientosVuelo + '}';
+    }
+    
+    
    
+    
     
     
     

@@ -39,11 +39,15 @@ public class ArregloPasajero {
         return resultPasa;
     }
     
-    public boolean agregar(){
+    public boolean agregar(Pasajero pasajeroAdd){
         boolean result=false;
         
-        return 
+        result = true;
+        
+        return result;
     }
+    
+    
     @Override
     public String toString() {
         return "ArregloPasajero{" + "PasajeroA=" + PasajeroA + '}';
