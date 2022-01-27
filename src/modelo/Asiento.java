@@ -13,12 +13,15 @@ public class Asiento {
     private int numeroasient;
     private char fila;
     private String estado;
+    private Pasajero pasajero;
 
-    public Asiento(int numeroasient, char fila, String estado) {
+    public Asiento(int numeroasient, char fila, String estado, Pasajero pasajero) {
         this.numeroasient = numeroasient;
         this.fila = fila;
         this.estado = estado;
+        this.pasajero = pasajero;
     }
+   
 
     public int getNumeroasient() {
         return numeroasient;

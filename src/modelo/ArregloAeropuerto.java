@@ -14,7 +14,7 @@ public class ArregloAeropuerto {
     private int indice;
     private Aeropuerto AeropuertoA[];
 
-    public ArregloAeropuerto(int cantidadaeropuertos, Aeropuerto[] AeropuertoA) {
+    public ArregloAeropuerto(int cantidadaeropuertos) {
         this.indice = 0;
         this.AeropuertoA = new Aeropuerto[cantidadaeropuertos];
     }

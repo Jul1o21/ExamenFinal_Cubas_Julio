@@ -5,6 +5,7 @@
  */
 package repositorio;
 
+import java.util.Date;
 import modelo.*;
 
 /**
@@ -14,7 +15,7 @@ import modelo.*;
 public class Repositorio {
     public static ArregloPais paisesessta;
     public static Aerolinea vuelossistema;
-    public static ArregloPasajero listapasajerossistema;
+    public static ArregloPasajero pasajerossistema;
     public static ArregloAeropuerto aeropuertosistema;
 
     public void reiniciarsistema(){
@@ -86,63 +87,71 @@ public class Repositorio {
         Aeropuerto aeropuertollegadaAdd;
         Asiento asientoadd;
         
+        
+        Pasajero pasajeroadd;
+        Date fechanaci;
+        fechanaci = new Date();
+        
         aerolinepordefect = new Aerolinea("aeroname1", "1111", 2);
         
-        aeropuertosalidaAdd = new Aeropuerto("aerosalidaName1", "aerosalidaDirecc1", true);
-        aeropuertollegadaAdd = new Aeropuerto("aerollegadaName1", "aerollegadaDirecc1", true);
+        aeropuertosalidaAdd = new Aeropuerto("aeropuertName1", "aeropuertDirecc1", true);
+        aeropuertollegadaAdd = new Aeropuerto("aeropuertName2", "aeropuertDirecc2", true);
         
-        vueloadd = new Vuelo("vuelocod1", "vuelofech1", "vuelohor1", 1, true, aeropuertosalidaAdd, aeropuertollegadaAdd,10);
+        vueloadd = new Vuelo("vuelocod1", "vuelofech1", "vuelohor1", 1, true, aeropuertosalidaAdd, aeropuertollegadaAdd,6);
         
-        asientoadd = new Asiento(1, '1', "vacio");
+        
+        pasajeroadd = new Pasajero("pasajeroTDoc1", "pasajeroNumDoc1", "pasajeroNames1", "pasajeroApellid1", fechanaci);
+        asientoadd = new Asiento(1, '1', "reservado",pasajeroadd);
+        vueloadd.agregarasiento(asientoadd);   
+        pasajeroadd = new Pasajero("pasajeroTDoc2", "pasajeroNumDoc2", "pasajeroNames2", "pasajeroApellid2", fechanaci);    
+        asientoadd = new Asiento(2, '1', "vacio",null);
+        vueloadd.agregarasiento(asientoadd);        
+        pasajeroadd = new Pasajero("pasajeroTDoc3", "pasajeroNumDoc3", "pasajeroNames3", "pasajeroApellid3", fechanaci);       
+        asientoadd = new Asiento(3, '1', "vacio",null);
         vueloadd.agregarasiento(asientoadd);
-        asientoadd = new Asiento(2, '1', "vacio");
+        pasajeroadd = new Pasajero("pasajeroTDoc4", "pasajeroNumDoc4", "pasajeroNames4", "pasajeroApellid4", fechanaci); 
+        asientoadd = new Asiento(4, '2', "vacio",null);
         vueloadd.agregarasiento(asientoadd);
-        asientoadd = new Asiento(3, '1', "vacio");
+        pasajeroadd = new Pasajero("pasajeroTDoc5", "pasajeroNumDoc5", "pasajeroNames5", "pasajeroApellid5", fechanaci); 
+        asientoadd = new Asiento(5, '2', "vacio",null);
         vueloadd.agregarasiento(asientoadd);
-        asientoadd = new Asiento(4, '1', "vacio");
+        pasajeroadd = new Pasajero("pasajeroTDoc6", "pasajeroNumDoc6", "pasajeroNames6", "pasajeroApellid6", fechanaci); 
+        asientoadd = new Asiento(6, '2', "reservado",pasajeroadd);
         vueloadd.agregarasiento(asientoadd);
-        asientoadd = new Asiento(5, '1', "vacio");
-        vueloadd.agregarasiento(asientoadd);
-        asientoadd = new Asiento(6, '2', "vacio");
-        vueloadd.agregarasiento(asientoadd);
-        asientoadd = new Asiento(7, '2', "vacio");
-        vueloadd.agregarasiento(asientoadd);
-        asientoadd = new Asiento(8, '2', "vacio");
-        vueloadd.agregarasiento(asientoadd);
-        asientoadd = new Asiento(9, '2', "vacio");
-        vueloadd.agregarasiento(asientoadd);
-        asientoadd = new Asiento(10, '2', "vacio");
-        vueloadd.agregarasiento(asientoadd);
+   
+        
+        
         
         
         //
         
-        aeropuertosalidaAdd = new Aeropuerto("aerosalidaName2", "aerosalidaDirecc2", true);
-        aeropuertollegadaAdd = new Aeropuerto("aerollegadaName2", "aerollegadaDirecc2", true);
+        aeropuertosalidaAdd = new Aeropuerto("aeropuertName3", "aeropuertDirecc3", true);
+        aeropuertollegadaAdd = new Aeropuerto("aeropuertName4", "aeropuertDirecc4", true);
         
-        vueloadd = new Vuelo("vuelocod2", "vuelofech2", "vuelohor2", 1, true, aeropuertosalidaAdd, aeropuertollegadaAdd,10);
+        vueloadd = new Vuelo("vuelocod2", "vuelofech2", "vuelohor2", 1, true, aeropuertosalidaAdd, aeropuertollegadaAdd,6);
 
+        pasajeroadd = new Pasajero("pasajeroTDoc11", "pasajeroNumDoc11", "pasajeroNames11", "pasajeroApellid11", fechanaci);
+        asientoadd = new Asiento(1, '1', "reservado",pasajeroadd);
+        vueloadd.agregarasiento(asientoadd);   
+        pasajeroadd = new Pasajero("pasajeroTDoc12", "pasajeroNumDoc12", "pasajeroNames12", "pasajeroApellid12", fechanaci);    
+        asientoadd = new Asiento(2, '1', "vacio",null);
+        vueloadd.agregarasiento(asientoadd);        
+        pasajeroadd = new Pasajero("pasajeroTDoc13", "pasajeroNumDoc13", "pasajeroNames13", "pasajeroApellid13", fechanaci);       
+        asientoadd = new Asiento(3, '1', "vacio",null);
+        vueloadd.agregarasiento(asientoadd);
+        pasajeroadd = new Pasajero("pasajeroTDoc14", "pasajeroNumDoc14", "pasajeroNames14", "pasajeroApellid14", fechanaci); 
+        asientoadd = new Asiento(4, '2', "vacio",null);
+        vueloadd.agregarasiento(asientoadd);
+        pasajeroadd = new Pasajero("pasajeroTDoc15", "pasajeroNumDoc15", "pasajeroNames15", "pasajeroApellid15", fechanaci); 
+        asientoadd = new Asiento(5, '2', "vacio",null);
+        vueloadd.agregarasiento(asientoadd);
+        pasajeroadd = new Pasajero("pasajeroTDoc16", "pasajeroNumDoc16", "pasajeroNames16", "pasajeroApellid16", fechanaci); 
+        asientoadd = new Asiento(6, '2', "reservado",pasajeroadd);
+        vueloadd.agregarasiento(asientoadd);
+      
         
-        asientoadd = new Asiento(1, '1', "vacio");
-        vueloadd.agregarasiento(asientoadd);
-        asientoadd = new Asiento(2, '1', "vacio");
-        vueloadd.agregarasiento(asientoadd);
-        asientoadd = new Asiento(3, '1', "vacio");
-        vueloadd.agregarasiento(asientoadd);
-        asientoadd = new Asiento(4, '1', "vacio");
-        vueloadd.agregarasiento(asientoadd);
-        asientoadd = new Asiento(5, '1', "vacio");
-        vueloadd.agregarasiento(asientoadd);
-        asientoadd = new Asiento(6, '2', "vacio");
-        vueloadd.agregarasiento(asientoadd);
-        asientoadd = new Asiento(7, '2', "vacio");
-        vueloadd.agregarasiento(asientoadd);
-        asientoadd = new Asiento(8, '2', "vacio");
-        vueloadd.agregarasiento(asientoadd);
-        asientoadd = new Asiento(9, '2', "vacio");
-        vueloadd.agregarasiento(asientoadd);
-        asientoadd = new Asiento(10, '2', "vacio");
-        vueloadd.agregarasiento(asientoadd);
+   
+       
         
         
     }
@@ -150,7 +159,39 @@ public class Repositorio {
     public void listapasajerospordefecto(){
         ArregloPasajero pasajerospordefect;
         Pasajero pasajeroadd;
+        Date fechanaci;
+        fechanaci = new Date();
         
+        pasajerospordefect = new ArregloPasajero(6);
+        
+        pasajeroadd = new Pasajero("pasajeroTDoc1", "pasajeroNumDoc1", "pasajeroNames1", "pasajeroApellid1", fechanaci);     
+        pasajerospordefect.agregar(pasajeroadd);
+        pasajeroadd = new Pasajero("pasajeroTDoc2", "pasajeroNumDoc2", "pasajeroNames2", "pasajeroApellid2", fechanaci);     
+        pasajerospordefect.agregar(pasajeroadd);
+        pasajeroadd = new Pasajero("pasajeroTDoc3", "pasajeroNumDoc3", "pasajeroNames3", "pasajeroApellid3", fechanaci);     
+        pasajerospordefect.agregar(pasajeroadd);
+        pasajeroadd = new Pasajero("pasajeroTDoc4", "pasajeroNumDoc4", "pasajeroNames4", "pasajeroApellid4", fechanaci);     
+        pasajerospordefect.agregar(pasajeroadd);
+        pasajeroadd = new Pasajero("pasajeroTDoc5", "pasajeroNumDoc5", "pasajeroNames5", "pasajeroApellid5", fechanaci);     
+        pasajerospordefect.agregar(pasajeroadd);
+        pasajeroadd = new Pasajero("pasajeroTDoc6", "pasajeroNumDoc6", "pasajeroNames6", "pasajeroApellid6", fechanaci);     
+        pasajerospordefect.agregar(pasajeroadd);
+ 
+    }
+    
+    public void aeropuertospordefecto(){
+        ArregloAeropuerto aerpuertospordefecto;
+        Aeropuerto aeropuertoadd;
+        aerpuertospordefecto = new ArregloAeropuerto(4);
+        
+        aeropuertoadd = new Aeropuerto("aeropuertName1", "aeropuertDirecc1", true);
+        aerpuertospordefecto.agregaraerop(aeropuertoadd);
+        aeropuertoadd = new Aeropuerto("aeropuertName2", "aeropuertDirecc2", true);
+        aerpuertospordefecto.agregaraerop(aeropuertoadd);
+        aeropuertoadd = new Aeropuerto("aeropuertName3", "aeropuertDirecc3", true);
+        aerpuertospordefecto.agregaraerop(aeropuertoadd);
+        aeropuertoadd = new Aeropuerto("aeropuertName4", "aeropuertDirecc4", true);
+        aerpuertospordefecto.agregaraerop(aeropuertoadd);
         
         
     }
